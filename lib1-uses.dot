@@ -20,7 +20,7 @@ digraph G {
         margin="0.5";
         edge [comment="subgraph edge wildcard"];
         node [comment="subgraph node wildcard"];
-        "all" [URL="all.svg"];
+        "all-targets" [URL="all-targets.svg"];
     }
     "lib1" [URL="lib1-uses.svg"];
     "lib2" [URL="lib2-uses.svg"];

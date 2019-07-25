@@ -1,5 +1,5 @@
 import shutil
-input_file = 'all.dot'
+input_file = 'all-targets.dot'
 for name in ['lib1', 'lib2', 'exe1', 'exe2']:
     for extension in ['-uses']:
         output_file = name + extension + '.dot'
