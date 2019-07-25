@@ -34,6 +34,10 @@ The Python 3 script [dot_convert.py](dot_convert.py) does this conversion for al
 
 ## Future exercises
 
+### Generate .dot files to represent dependencies of your projects
+
+These .dot files were hand-edited, for demo purposes. The intention here is to show how information in one's own build system could be presented in an easily navigable way.
+
 ### What depends on a particular library? 
 
 At a previous job, I wrote scripts to generate files like this from information in the project build system. It had one really useful extra feature, which is that you could also see what targets depended on a given library.
@@ -49,7 +53,6 @@ In my first implementation, clicking repeatedly on a library node alternated bet
 
 This was a bit non-obvious to users, so I then switched to adding extra nodes near the 'all-targets' node that hyper-linked to the two related images. 
 
-
 ### Showing more information
 
 I also added colour-coding to the images, for different types of libraries, with categories such as:
@@ -59,3 +62,40 @@ I also added colour-coding to the images, for different types of libraries, with
 * targets that depended on libraries that they should not have done
 
 I then added a colour-key link to each image. 
+
+## Alternative approaches - if you use CMake
+
+If you use CMake to drive your builds, and you just want to see a single image of all your project dependencies, you can use CMake's own option `--graphviz`.
+
+Taking [ApprovalTests.cpp](https://github.com/claremacrae/ApprovalTests.cpp/) as an example:
+
+```bash
+cd ApprovalTests.cpp
+mkdir cmake-build-dot
+cd    cmake-build-dot
+cmake --graphviz=test.dot ..
+dot -Tsvg test.dot -o test.svg
+```
+
+The generated .dot file can be seen here
+
+And the generated .svg file looks like this:
+
+![](cmake-generated-files/test.svg)
+
+### Details of the CMake mechanism
+
+There is an [overview of the CMake graphviz output mechanism](https://gitlab.kitware.com/cmake/community/wikis/doc/cmake/Graphviz) on the Cmake wiki.
+
+And there is much [more detail in the the CMake documentation](https://cmake.org/cmake/help/latest/module/CMakeGraphVizOptions.html). 
+
+This documentation page describes the many separate files that CMake writes out.
+
+It says:
+
+> When CMake is run with the --graphviz=foo.dot option, it will produce:
+> * a foo.dot file showing all dependencies in the project
+> * a foo.dot.<target> file for each target, file showing on which other targets the respective target depends
+> * a foo.dot.<target>.dependers file, showing which other targets depend on the respective target
+
+This means that if you use CMake, and if you spend time post-processing the CMake graphviz output to add URLs, you could probable answer my "What depends on a particular library?" question above, for your projects, really quite quickly.

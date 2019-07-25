@@ -1,0 +1,25 @@
+digraph "GG" {
+node [
+  fontsize = "12"
+];
+    "node4" [ label="ApprovalTests" shape="box"];
+    "node23" [ label="ApprovalTests_Catch1_Tests" shape="house"];
+    "node23" -> "node4" // ApprovalTests_Catch1_Tests -> ApprovalTests
+    "node25" [ label="ApprovalTests_Catch2_Tests" shape="house"];
+    "node25" -> "node4" // ApprovalTests_Catch2_Tests -> ApprovalTests
+    "node33" [ label="ApprovalTests_DocTest_Tests" shape="house"];
+    "node33" -> "node4" // ApprovalTests_DocTest_Tests -> ApprovalTests
+    "node29" [ label="ApprovalTests_GoogleTest_Tests" shape="house"];
+    "node29" -> "node4" // ApprovalTests_GoogleTest_Tests -> ApprovalTests
+    "node16" [ label="gtest" shape="diamond"];
+    "node29" -> "node16" // ApprovalTests_GoogleTest_Tests -> gtest
+    "node17" [ label="gtest_main" shape="diamond"];
+    "node29" -> "node17" // ApprovalTests_GoogleTest_Tests -> gtest_main
+    "node17" -> "node16" // gtest_main -> gtest
+    "node14" [ label="gmock" shape="diamond"];
+    "node13" [ label="gmock_main" shape="diamond"];
+    "node39" [ label="googletest_existing_main" shape="house"];
+    "node39" -> "node4" // googletest_existing_main -> ApprovalTests
+    "node39" -> "node16" // googletest_existing_main -> gtest
+    "node39" -> "node17" // googletest_existing_main -> gtest_main
+}
