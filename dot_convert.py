@@ -15,7 +15,7 @@ def convert_dot_file_to_svg(dot_file):
     output_file = os.path.splitext(dot_file)[0] + '.' + format
     # This uses a Python 3 feature - f-strings, for convenience.
     # https://realpython.com/python-f-strings/#f-strings-a-new-and-improved-way-to-format-strings-in-python
-    command = f'dot -T%s {dot_file} -o {output_file}' % format
+    command = f'dot -T{format} {dot_file} -o {output_file}'
     os.system(command)
 
 
