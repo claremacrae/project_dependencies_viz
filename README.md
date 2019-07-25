@@ -1,12 +1,34 @@
 # project_dependencies_viz
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Introduction](#introduction)
+- [Generating your own interactive dependency images](#generating-your-own-interactive-dependency-images)
+  - [The 'sample' project](#the-sample-project)
+  - [Viewing the dependencies](#viewing-the-dependencies)
+  - [Creating the .svg files from .dot files](#creating-the-svg-files-from-dot-files)
+  - [Future exercises](#future-exercises)
+    - [Generate .dot files to represent dependencies of your projects](#generate-dot-files-to-represent-dependencies-of-your-projects)
+    - [What depends on a particular library?](#what-depends-on-a-particular-library)
+    - [Showing more information](#showing-more-information)
+- [Alternative approaches - if you use CMake](#alternative-approaches---if-you-use-cmake)
+  - [Details of the CMake mechanism](#details-of-the-cmake-mechanism)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Introduction
+
 This is a quick demo of how to use [graphviz](https://www.graphviz.org/) to make interactive svg files to show dependencies between projects, to help answer a question asked on the [#include <C++> Discord server](https://www.includecpp.org/).
 
 The graphviz .dot files here show a technique of adding [URLs](https://www.graphviz.org/doc/info/attrs.html#d:URL) to nodes in a graph. When the output is .svg, the nodes are then hyper-linked, and provided easy navigation.
 
 A second section shows how you can achieve a similar effect more easily, if your builds are driven by CMake.
 
-## The 'sample' project
+## Generating your own interactive dependency images
+
+### The 'sample' project
 
 The images here represent the dependencies in a fictional, simple system, consisting of:
  
@@ -18,7 +40,7 @@ The images here represent the dependencies in a fictional, simple system, consis
 * the arrows show project dependencies 
 * 'all-targets' is a special link that loads the full dependency image - which is what is shown above. This will make more sense after reading the next section.
 
-## Viewing the dependencies
+### Viewing the dependencies
 
 1. Download the repo
 2. Load the file 'all-targets.svg into a modern browser - Chrome, for example
@@ -29,7 +51,7 @@ The images here represent the dependencies in a fictional, simple system, consis
 
 You can click on 'all-targets' to get back to the initial view.
 
-## Creating the .svg files from .dot files
+### Creating the .svg files from .dot files
 
 Example command to create the file `all-targets.svg` from `all-targets.dot`
 
@@ -38,13 +60,13 @@ dot -Tsvg all-targets.dot -o all-targets.svg
 ```
 The Python 3 script [dot_convert.py](dot_convert.py) does this conversion for all .dot files in the current directory. It requires graphvis'z `dot` command to be in the path.
 
-## Future exercises
+### Future exercises
 
-### Generate .dot files to represent dependencies of your projects
+#### Generate .dot files to represent dependencies of your projects
 
 These .dot files were hand-edited, for demo purposes. The intention here is to show how information in one's own build system could be presented in an easily navigable way.
 
-### What depends on a particular library? 
+#### What depends on a particular library? 
 
 At a previous job, I wrote scripts to generate files like this from information in the project build system. It had one really useful extra feature, which is that you could also see what targets depended on a given library.
 
@@ -59,7 +81,7 @@ In my first implementation, clicking repeatedly on a library node alternated bet
 
 This was a bit non-obvious to users, so I then switched to adding extra nodes near the 'all-targets' node that hyper-linked to the two related images. 
 
-### Showing more information
+#### Showing more information
 
 I also added colour-coding to the images, for different types of libraries, with categories such as:
 
