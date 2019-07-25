@@ -8,11 +8,15 @@ A second section shows how you can achieve a similar effect more easily, if your
 
 ## The 'sample' project
 
-The images here represent the dependencies in a fictional, simple system, consisting of two libraries (lib1 and lib2) and two programs (exe1 and exe2)
+The images here represent the dependencies in a fictional, simple system, consisting of:
+ 
+* two libraries ('lib1' and 'lib2') - drawn as ovals 
+* two programs ('exe1' and 'exe2') - drawn as rectangles
 
 ![](all-targets.svg)
 
-'all-targets' is a special link that loads the full dependency image - which is what is shown above.
+* the arrows show project dependencies 
+* 'all-targets' is a special link that loads the full dependency image - which is what is shown above. This will make more sense after reading the next section.
 
 ## Viewing the dependencies
 
@@ -89,7 +93,7 @@ And the generated .svg file looks like this:
 
 There is an [overview of the CMake graphviz output mechanism](https://gitlab.kitware.com/cmake/community/wikis/doc/cmake/Graphviz) on the Cmake wiki.
 
-And there is much [more detail in the the CMake documentation](https://cmake.org/cmake/help/latest/module/CMakeGraphVizOptions.html). 
+And there is much [more detail in the the CMake documentation](https://cmake.org/cmake/help/latest/module/CMakeGraphVizOptions.html), showing how you can control what types of targets are included in the output, and how to control the node and edge styles.
 
 This documentation page describes the many separate files that CMake writes out.
 
