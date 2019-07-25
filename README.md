@@ -28,6 +28,14 @@ The graphviz .dot files here show a technique of adding [URLs](https://www.graph
 
 A second section shows how you can achieve a similar effect more easily, if your builds are driven by CMake.
 
+### Feedback welcome
+
+I'd love to have feedback on this - feel free to use the Issues system in this repo, or [Twitter](https://twitter.com/ClareMacraeUK).
+ 
+Are there any better mechanisms that already exist to show project dependencies in large bodies of C++ code?
+
+Has anyone already done the work of adding URLs to make the CMake output `--graphviz` output files interactive?
+
 ## Generating your own interactive dependency images
 
 ### The 'sample' project
