@@ -12,6 +12,10 @@ def process_files():
 
 def convert_dot_file_to_svg(dot_file):
     format = 'svg'
+    convert_dot_file_to_image(dot_file, format)
+
+
+def convert_dot_file_to_image(dot_file, format):
     output_file = os.path.splitext(dot_file)[0] + '.' + format
     # This uses a Python 3 feature - f-strings, for convenience.
     # https://realpython.com/python-f-strings/#f-strings-a-new-and-improved-way-to-format-strings-in-python
