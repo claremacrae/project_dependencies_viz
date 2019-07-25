@@ -143,8 +143,8 @@ This documentation page describes the many separate files that CMake writes out.
 It says:
 
 > When CMake is run with the --graphviz=foo.dot option, it will produce:
-> * a foo.dot file showing all dependencies in the project
-> * a foo.dot.<target> file for each target, file showing on which other targets the respective target depends
-> * a foo.dot.<target>.dependers file, showing which other targets depend on the respective target
+> * a `foo.dot` file showing all dependencies in the project
+> * a `foo.dot.<target>` file for each target, file showing on which other targets the respective target depends
+> * a `foo.dot.<target>.dependers` file, showing which other targets depend on the respective target
 
 This means that if you use CMake, and if you spend time post-processing the CMake graphviz output to add URLs, you could probable answer my "What depends on a particular library?" question above, for your projects, really quite quickly.
