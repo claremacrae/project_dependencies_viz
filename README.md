@@ -24,7 +24,7 @@
 
 ## Introduction
 
-This is a quick demo of how to use [graphviz](https://www.graphviz.org/) to make interactive svg files to show dependencies between projects, to help answer a question asked on the [#include <C++> Discord server](https://www.includecpp.org/).
+This is a quick demo of how to use [graphviz](https://www.graphviz.org/) to make interactive SVG files to show dependencies between projects, to help answer a question asked on the [#include <C++> Discord server](https://www.includecpp.org/).
 
 The graphviz .dot files here show a technique of adding [URLs](https://www.graphviz.org/doc/info/attrs.html#d:URL) to nodes in a graph. When the output is .svg, the nodes are then hyper-linked, and provided easy navigation.
 
@@ -40,7 +40,7 @@ Has anyone already done the work of adding URLs to make the CMake output `--grap
 
 ## Why SVG output?
 
-Aside from the hyperlinking benefits I describe below, I found these benefits of using the SVG format to visualise complex dependencies:
+Aside from the hyperlinking benefits I describe below, I found these benefits of using the [SVG format](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) to visualise complex dependencies:
 
 * The files are text, and load very quickly into browsers like Chrome and Vivaldi - much quicker than corresponding bitmap images
 * Because the SVG files are text, you can use the Browser's Search feature (`Ctrl + F`) to easily search for text in the image
