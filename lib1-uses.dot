@@ -25,8 +25,4 @@ digraph G {
     "lib1" [URL="lib1-uses.svg"];
     "lib2" [URL="lib2-uses.svg"];
     "lib1" -> "lib2";
-    "exe1" [shape="box" URL="exe1-uses.svg"];
-    "exe2" [shape="box" URL="exe2-uses.svg"];
-    "exe1" -> "lib1";
-    "exe2" -> "lib2";
 }
