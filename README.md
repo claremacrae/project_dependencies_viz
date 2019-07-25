@@ -126,9 +126,9 @@ cmake --graphviz=test.dot ..
 dot -Tsvg test.dot -o test.svg
 ```
 
-The generated .dot file can be seen here
+The generated .dot file can be seen [here](cmake-generated-files/test.dot).
 
-And the generated .svg file looks like this:
+And the [generated .svg](cmake-generated-files/test.svg) file looks like this:
 
 ![](cmake-generated-files/test.svg)
 
