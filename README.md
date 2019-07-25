@@ -7,6 +7,8 @@
 
 
 - [Introduction](#introduction)
+  - [Feedback welcome](#feedback-welcome)
+- [Why SVG output?](#why-svg-output)
 - [Generating your own interactive dependency images](#generating-your-own-interactive-dependency-images)
   - [The 'sample' project](#the-sample-project)
   - [Viewing the dependencies](#viewing-the-dependencies)
@@ -35,6 +37,15 @@ I'd love to have feedback on this - feel free to use the Issues system in this r
 Are there any better mechanisms that already exist to show project dependencies in large bodies of C++ code?
 
 Has anyone already done the work of adding URLs to make the CMake output `--graphviz` output files interactive?
+
+## Why SVG output?
+
+Aside from the hyperlinking benefits I describe below, I found these benefits of using the SVG format to visualise complex dependencies:
+
+* The files are text, and load very quickly into browsers like Chrome and Vivaldi - much quicker than corresponding bitmap images
+* Because the SVG files are text, you can use the Browser's Search feature (`Ctrl + F`) to easily search for text in the image
+* The images scale very nicely when zooming in and out of large files
+* Some browsers allow you to hold down the shift key and then drag with the mouse to pan in all directions around the image 
 
 ## Generating your own interactive dependency images
 
