@@ -11,8 +11,7 @@ def process_files():
 
 
 def convert_dot_file_to_svg(dot_file):
-    format = 'svg'
-    convert_dot_file_to_image(dot_file, format)
+    convert_dot_file_to_image(dot_file, 'svg')
 
 
 def convert_dot_file_to_image(dot_file, format):
