@@ -63,7 +63,7 @@ The images here represent the dependencies in a fictional, simple system, consis
 
 ### Viewing the dependencies
 
-1. Download the repo
+1. Download [this repo](https://github.com/claremacrae/project_dependencies_viz)
 2. Load the file 'all-targets.svg into a modern browser - Chrome, for example
 3. Click on  'exe1'
 4. The file 'exe1-uses.svg' will load - showing only things that 'exe1' uses:
