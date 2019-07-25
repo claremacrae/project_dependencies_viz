@@ -4,6 +4,8 @@ This is a quick demo of how to use [graphviz](https://www.graphviz.org/) to make
 
 The graphviz .dot files here show a technique of adding [URLs](https://www.graphviz.org/doc/info/attrs.html#d:URL) to nodes in a graph. When the output is .svg, the nodes are then hyper-linked, and provided easy navigation.
 
+A second section shows how you can achieve a similar effect more easily, if your builds are driven by CMake.
+
 ## The 'sample' project
 
 The images here represent the dependencies in a fictional, simple system, consisting of two libraries (lib1 and lib2) and two programs (exe1 and exe2)
