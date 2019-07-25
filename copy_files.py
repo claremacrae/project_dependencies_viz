@@ -1,6 +1,6 @@
 import shutil
 input_file = 'all.dot'
-for name in ['lib1', 'lib2', 'lib3', 'exe1', 'exe2']:
+for name in ['lib1', 'lib2', 'exe1', 'exe2']:
     for extension in ['-uses', '-used-by']:
         output_file = name + extension + '.dot'
         print(output_file)
