@@ -1,3 +1,6 @@
+"""
+A helper script I used when first creating the .dot files
+"""
 import shutil
 input_file = 'all-targets.dot'
 for name in ['lib1', 'lib2', 'exe1', 'exe2']:
