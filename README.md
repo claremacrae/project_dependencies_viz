@@ -8,7 +8,9 @@
 
 - [Introduction](#introduction)
   - [Feedback welcome](#feedback-welcome)
-- [Why SVG output?](#why-svg-output)
+- [Motivation](#motivation)
+  - [Why bother?](#why-bother)
+  - [Why SVG output?](#why-svg-output)
 - [Generating your own interactive dependency images](#generating-your-own-interactive-dependency-images)
   - [The 'sample' project](#the-sample-project)
   - [Basic Steps](#basic-steps)
@@ -40,7 +42,24 @@ Are there any better mechanisms that already exist to show project dependencies 
 
 Has anyone already done the work of adding URLs to make the CMake output `--graphviz` output files interactive?
 
-## Why SVG output?
+## Motivation
+
+### Why bother?
+
+The examples I use here are tiny projects, for brevity. But these approaches are really useful when you have much larger volumes of code, typically divided up into dozens or hundreds of smaller projects.
+
+I used the first approach repeatedly on a system with several million lines of C++ code, for several major refactorings.  
+
+Example reasons why you might want to see dependencies between your projects:
+
+* To understand the dependencies between targets (libraries or executables) in your builds
+* To explain the structure of your code to a colleague
+* To spot dependencies that don't make sense, in order to remove them
+* To plan project-restructuring exercises
+* To help divide up libraries that have become large
+* To speed up parallel builds by removing unnecessary dependencies between targets,  
+
+### Why SVG output?
 
 Aside from the hyperlinking benefits I describe below, I found these benefits of using the [SVG format](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) to visualise complex dependencies:
 
