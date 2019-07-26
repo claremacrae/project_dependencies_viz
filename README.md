@@ -11,9 +11,10 @@
 - [Why SVG output?](#why-svg-output)
 - [Generating your own interactive dependency images](#generating-your-own-interactive-dependency-images)
   - [The 'sample' project](#the-sample-project)
-  - [Adding hyperlinks to nodes in .dot files](#adding-hyperlinks-to-nodes-in-dot-files)
-  - [Converting .dot files to .svg](#converting-dot-files-to-svg)
-  - [Viewing the .svg files, to see the dependencies](#viewing-the-svg-files-to-see-the-dependencies)
+  - [Basic Steps](#basic-steps)
+    - [Adding hyperlinks to nodes in .dot files](#adding-hyperlinks-to-nodes-in-dot-files)
+    - [Converting .dot files to .svg](#converting-dot-files-to-svg)
+    - [Viewing the .svg files, to see the dependencies](#viewing-the-svg-files-to-see-the-dependencies)
   - [Future exercises](#future-exercises)
     - [Generate .dot files to represent dependencies of your projects](#generate-dot-files-to-represent-dependencies-of-your-projects)
     - [What depends on a particular library?](#what-depends-on-a-particular-library)
@@ -62,7 +63,9 @@ The images here represent the dependencies in a fictional, simple system, consis
 * the arrows show project dependencies 
 * 'all-targets' is a special link that loads the full dependency image - which is what is shown above. This will make more sense after reading the section on viewing the dependencies.
 
-### Adding hyperlinks to nodes in .dot files
+### Basic Steps
+
+#### Adding hyperlinks to nodes in .dot files
 
 The dot file used to create the image above is this, copied from [all-targets.dot](all-targets.dot):
 
@@ -109,7 +112,7 @@ This is a pretty standard .dot file. It's the `URL` node attributes that make do
 
 See the [documentation for the URL attribute](https://www.graphviz.org/doc/info/attrs.html#d:URL), which is worth reading for important notes like the node needing to be filled for this to work well in SVG output, and which other output formats support URLs. It also has links to the attributes to use for adding hyperlinks to the various bits of graph edges.
 
-### Converting .dot files to .svg 
+#### Converting .dot files to .svg 
 
 Example command to create the file `all-targets.svg` from `all-targets.dot`
 
@@ -118,7 +121,7 @@ dot -Tsvg all-targets.dot -o all-targets.svg
 ```
 The Python 3 script [dot_convert.py](dot_convert.py) does this conversion for all .dot files in the current directory. It requires graphviz's `dot` command to be in the path.
 
-### Viewing the .svg files, to see the dependencies
+#### Viewing the .svg files, to see the dependencies
 
 1. Download [this repo](https://github.com/claremacrae/project_dependencies_viz)
 2. Load the file 'all-targets.svg into a modern browser - Chrome, for example
