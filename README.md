@@ -42,6 +42,8 @@ Are there any better mechanisms that already exist to show project dependencies 
 
 Has anyone already done the work of adding URLs to make the CMake output `--graphviz` output files interactive?
 
+*Clare Macrae, [claremacrae.co.uk](https://claremacrae.co.uk/)*
+
 ## Motivation
 
 ### Why bother?
