@@ -129,10 +129,25 @@ The Python 3 script [dot_convert.py](dot_convert.py) does this conversion for al
 
 #### Viewing the .svg files, to see the dependencies
 
-1. Download [this repo](https://github.com/claremacrae/project_dependencies_viz)
-2. Load the file 'all-targets.svg into a modern browser - Chrome, for example
-3. Click on  'exe1'
-4. The file 'exe1-uses.svg' will load - showing only things that 'exe1' uses:
+Web browsers like Chrome and Vivaldi work make it really easy to view these files, with working hyperlinks. Firefox is fine too, but has the limitation that holding down the Shift key doesn't enable panning.
+
+I found two approaches to provide access to the generated .SVG files:
+
+1. Somehow share the folder that the files are in
+2. Or put them in a folder that can be viewed via an HTTP server
+
+So, to navigate the dependencies in my sample project, do one of these:
+
+1. Get the files from github:
+    * download or clone [this repo](https://github.com/claremacrae/project_dependencies_viz)
+    * Open `all-targets.svg` in a browser
+2. View the files via a web server, see [all-targets.svg](https://claremacrae.co.uk/images/project_dependencies/all-targets.svg).
+
+Now you've got `all-targets.svg` loaded, try these steps:
+
+1. Load the file 'all-targets.svg into a modern browser - Chrome, for example
+2. Click on  'exe1'
+3. The file 'exe1-uses.svg' will load - showing only things that 'exe1' uses:
 
 ![](exe1-uses.svg)
 
