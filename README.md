@@ -13,7 +13,7 @@
   - [The 'sample' project](#the-sample-project)
   - [Adding hyperlinks to nodes in .dot files](#adding-hyperlinks-to-nodes-in-dot-files)
   - [Viewing the .svg files, to see the dependencies](#viewing-the-svg-files-to-see-the-dependencies)
-  - [Creating the .svg files from .dot files](#creating-the-svg-files-from-dot-files)
+  - [Converting .dot files to .svg](#converting-dot-files-to-svg)
   - [Future exercises](#future-exercises)
     - [Generate .dot files to represent dependencies of your projects](#generate-dot-files-to-represent-dependencies-of-your-projects)
     - [What depends on a particular library?](#what-depends-on-a-particular-library)
@@ -121,7 +121,7 @@ See the [documentation for the URL attribute](https://www.graphviz.org/doc/info/
 
 You can click on 'all-targets' to get back to the initial view.
 
-### Creating the .svg files from .dot files
+### Converting .dot files to .svg 
 
 Example command to create the file `all-targets.svg` from `all-targets.dot`
 
