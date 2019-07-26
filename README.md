@@ -11,6 +11,7 @@
 - [Why SVG output?](#why-svg-output)
 - [Generating your own interactive dependency images](#generating-your-own-interactive-dependency-images)
   - [The 'sample' project](#the-sample-project)
+  - [Adding hyperlinks to nodes in .dot files](#adding-hyperlinks-to-nodes-in-dot-files)
   - [Viewing the dependencies](#viewing-the-dependencies)
   - [Creating the .svg files from .dot files](#creating-the-svg-files-from-dot-files)
   - [Future exercises](#future-exercises)
@@ -42,7 +43,7 @@ Has anyone already done the work of adding URLs to make the CMake output `--grap
 
 Aside from the hyperlinking benefits I describe below, I found these benefits of using the [SVG format](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) to visualise complex dependencies:
 
-* The files are text, and load very quickly into browsers like Chrome and Vivaldi - much quicker than corresponding bitmap images
+* The files load very quickly into browsers like Chrome and Vivaldi - much quicker than corresponding bitmap images
 * Because the SVG files are text, you can use the Browser's Search feature (`Ctrl + F`) to easily search for text in the image
 * The images scale very nicely when zooming in and out of large files
 * Some browsers allow you to hold down the shift key and then drag with the mouse to pan in all directions around the image 
@@ -59,7 +60,55 @@ The images here represent the dependencies in a fictional, simple system, consis
 ![](all-targets.svg)
 
 * the arrows show project dependencies 
-* 'all-targets' is a special link that loads the full dependency image - which is what is shown above. This will make more sense after reading the next section.
+* 'all-targets' is a special link that loads the full dependency image - which is what is shown above. This will make more sense after reading the section on viewing the dependencies.
+
+### Adding hyperlinks to nodes in .dot files
+
+The dot file used to create the image above is this, copied from [all-targets.dot](all-targets.dot):
+
+```dot
+digraph G {
+    fontname="sans-serif";
+    penwidth="0.1";
+    edge [comment="Wildcard edge", 
+          fontname="sans-serif", 
+          fontsize=10, 
+          colorscheme="blues3", 
+          color=2, 
+          fontcolor=3];
+    node [fontname="serif", 
+          fontsize=13, 
+          fillcolor="1", 
+          colorscheme="blues4", 
+          color="2", 
+          fontcolor="4", 
+          style="filled"];
+    subgraph "contents" {
+        rankdir="LR";
+        style="solid";
+        margin="0.5";
+        edge [comment="subgraph edge wildcard"];
+        node [comment="subgraph node wildcard"];
+        "all-targets" [URL="all-targets.svg"];
+    }
+    "lib1" [URL="lib1-uses.svg"];
+    "lib2" [URL="lib2-uses.svg"];
+    "lib1" -> "lib2";
+    "exe1" [shape="box" URL="exe1-uses.svg"];
+    "exe2" [shape="box" URL="exe2-uses.svg"];
+    "exe1" -> "lib1";
+    "exe2" -> "lib2";
+}
+```
+
+This is a pretty standard .dot file. It's the `URL` node attributes that make dot add hyperlinks to the nodes, e.g. in this line, which means that clicking on the rectangle labelled `exe2` will make the browser load the file [`exe2-uses.svg`](exe2-uses.svg):
+
+`"exe2" [shape="box" URL="exe2-uses.svg"];`
+
+
+
+See the [documentation for the URL attribute](https://www.graphviz.org/doc/info/attrs.html#d:URL), which is worth reading for important notes like the node needing to be filled for this to work well in SVG output, and which other output formats support URLs. It also has links to the attributes to use for adding hyperlinks to the various bits of graph edges.
+
 
 ### Viewing the dependencies
 
