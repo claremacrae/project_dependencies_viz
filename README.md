@@ -57,7 +57,7 @@ Example reasons why you might want to see dependencies between your projects:
 * To spot dependencies that don't make sense, in order to remove them
 * To plan project-restructuring exercises
 * To help divide up libraries that have become large
-* To speed up parallel builds by removing unnecessary dependencies between targets,  
+* To speed up parallel builds by removing unnecessary dependencies between targets 
 
 ### Why SVG output?
 
