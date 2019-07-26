@@ -88,7 +88,7 @@ The following sections show the essential steps needed to make this work, if you
 
 For brevity, I'm not explaining every graphviz dot construct used here - just the bits for adding hyperlinks.
 
-Wikipedia gives a simple introduction to the [dot language](https://en.wikipedia.org/wiki/DOT_(graph_description_language\)), and there is also the [graphviz documentation](https://www.graphviz.org/documentation/).
+Wikipedia gives a simple introduction to the [dot language](https://en.wikipedia.org/wiki/DOT_(graph_description_language)), and there is also the [graphviz documentation](https://www.graphviz.org/documentation/).
 
 #### Adding hyperlinks to nodes in .dot files
 
