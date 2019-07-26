@@ -65,6 +65,12 @@ The images here represent the dependencies in a fictional, simple system, consis
 
 ### Basic Steps
 
+The following sections show the essential steps needed to make this work, if you are writing your own mechanism to browse your project dependencies.
+
+For brevity, I'm not explaining every graphviz dot construct used here - just the bits for adding hyperlinks.
+
+Wikipedia gives a simple introduction to the [dot language](https://en.wikipedia.org/wiki/DOT_(graph_description_language\)), and there is also the [graphviz documentation](https://www.graphviz.org/documentation/).
+
 #### Adding hyperlinks to nodes in .dot files
 
 The dot file used to create the image above is this, copied from [all-targets.dot](all-targets.dot):
