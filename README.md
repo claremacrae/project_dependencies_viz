@@ -162,7 +162,7 @@ So, to navigate the dependencies in my sample project, do one of these:
 1. Get the files from github:
     * download or clone [this repo](https://github.com/claremacrae/project_dependencies_viz)
     * Open `all-targets.svg` in a browser
-2. View the files via a web server, see [all-targets.svg](https://claremacrae.co.uk/images/project_dependencies/all-targets.svg).
+2. View the files via a web server: for example, see [all-targets.svg](https://claremacrae.co.uk/images/project_dependencies/all-targets.svg).
 
 Now you've got `all-targets.svg` loaded, try these steps:
 
