@@ -12,8 +12,8 @@
 - [Generating your own interactive dependency images](#generating-your-own-interactive-dependency-images)
   - [The 'sample' project](#the-sample-project)
   - [Adding hyperlinks to nodes in .dot files](#adding-hyperlinks-to-nodes-in-dot-files)
-  - [Viewing the .svg files, to see the dependencies](#viewing-the-svg-files-to-see-the-dependencies)
   - [Converting .dot files to .svg](#converting-dot-files-to-svg)
+  - [Viewing the .svg files, to see the dependencies](#viewing-the-svg-files-to-see-the-dependencies)
   - [Future exercises](#future-exercises)
     - [Generate .dot files to represent dependencies of your projects](#generate-dot-files-to-represent-dependencies-of-your-projects)
     - [What depends on a particular library?](#what-depends-on-a-particular-library)
@@ -109,6 +109,14 @@ This is a pretty standard .dot file. It's the `URL` node attributes that make do
 
 See the [documentation for the URL attribute](https://www.graphviz.org/doc/info/attrs.html#d:URL), which is worth reading for important notes like the node needing to be filled for this to work well in SVG output, and which other output formats support URLs. It also has links to the attributes to use for adding hyperlinks to the various bits of graph edges.
 
+### Converting .dot files to .svg 
+
+Example command to create the file `all-targets.svg` from `all-targets.dot`
+
+```bash
+dot -Tsvg all-targets.dot -o all-targets.svg
+```
+The Python 3 script [dot_convert.py](dot_convert.py) does this conversion for all .dot files in the current directory. It requires graphviz's `dot` command to be in the path.
 
 ### Viewing the .svg files, to see the dependencies
 
@@ -120,15 +128,6 @@ See the [documentation for the URL attribute](https://www.graphviz.org/doc/info/
 ![](exe1-uses.svg)
 
 You can click on 'all-targets' to get back to the initial view.
-
-### Converting .dot files to .svg 
-
-Example command to create the file `all-targets.svg` from `all-targets.dot`
-
-```bash
-dot -Tsvg all-targets.dot -o all-targets.svg
-```
-The Python 3 script [dot_convert.py](dot_convert.py) does this conversion for all .dot files in the current directory. It requires graphviz's `dot` command to be in the path.
 
 ### Future exercises
 
