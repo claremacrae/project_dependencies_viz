@@ -208,7 +208,7 @@ I then added a colour-key link to each image.
 
 If you use CMake to drive your builds, and you just want to see a single image of all your project dependencies, you can use CMake's own option `--graphviz`.
 
-Taking [ApprovalTests.cpp](https://github.com/claremacrae/ApprovalTests.cpp/) as an example:
+Taking [ApprovalTests.cpp](https://github.com/approvals/ApprovalTests.cpp/) as an example:
 
 ```bash
 cd ApprovalTests.cpp
