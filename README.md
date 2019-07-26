@@ -79,7 +79,7 @@ Example command to create the file `all-targets.svg` from `all-targets.dot`
 ```bash
 dot -Tsvg all-targets.dot -o all-targets.svg
 ```
-The Python 3 script [dot_convert.py](dot_convert.py) does this conversion for all .dot files in the current directory. It requires graphvis'z `dot` command to be in the path.
+The Python 3 script [dot_convert.py](dot_convert.py) does this conversion for all .dot files in the current directory. It requires graphviz's `dot` command to be in the path.
 
 ### Future exercises
 
