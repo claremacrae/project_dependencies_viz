@@ -164,9 +164,8 @@ So, to navigate the dependencies in my sample project, do one of these:
 
 Now you've got `all-targets.svg` loaded, try these steps:
 
-1. Load the file 'all-targets.svg into a modern browser - Chrome, for example
-2. Click on  'exe1'
-3. The file 'exe1-uses.svg' will load - showing only things that 'exe1' uses:
+1. Click on  'exe1'
+2. The file 'exe1-uses.svg' will load - showing only things that 'exe1' uses:
 
 ![](exe1-uses.svg)
 
