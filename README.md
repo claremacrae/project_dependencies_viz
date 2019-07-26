@@ -30,7 +30,7 @@
 
 This is a quick demo of how to use [graphviz](https://www.graphviz.org/) to make interactive SVG files to show dependencies between projects, to help answer a question asked on the [#include <C++> Discord server](https://www.includecpp.org/).
 
-The graphviz .dot files here show a technique of adding [URLs](https://www.graphviz.org/doc/info/attrs.html#d:URL) to nodes in a graph. When the output is .svg, the nodes are then hyper-linked, and provided easy navigation.
+The graphviz .dot files here show a technique of adding [URLs](https://www.graphviz.org/doc/info/attrs.html#d:URL) to nodes in a graph. When the output is .svg, the nodes are then hyper-linked, and provide easy navigation.
 
 A second section shows how you can achieve a similar effect more easily, if your builds are driven by CMake.
 
