@@ -12,7 +12,7 @@
 - [Generating your own interactive dependency images](#generating-your-own-interactive-dependency-images)
   - [The 'sample' project](#the-sample-project)
   - [Adding hyperlinks to nodes in .dot files](#adding-hyperlinks-to-nodes-in-dot-files)
-  - [Viewing the dependencies](#viewing-the-dependencies)
+  - [Viewing the .svg files, to see the dependencies](#viewing-the-svg-files-to-see-the-dependencies)
   - [Creating the .svg files from .dot files](#creating-the-svg-files-from-dot-files)
   - [Future exercises](#future-exercises)
     - [Generate .dot files to represent dependencies of your projects](#generate-dot-files-to-represent-dependencies-of-your-projects)
@@ -110,7 +110,7 @@ This is a pretty standard .dot file. It's the `URL` node attributes that make do
 See the [documentation for the URL attribute](https://www.graphviz.org/doc/info/attrs.html#d:URL), which is worth reading for important notes like the node needing to be filled for this to work well in SVG output, and which other output formats support URLs. It also has links to the attributes to use for adding hyperlinks to the various bits of graph edges.
 
 
-### Viewing the dependencies
+### Viewing the .svg files, to see the dependencies
 
 1. Download [this repo](https://github.com/claremacrae/project_dependencies_viz)
 2. Load the file 'all-targets.svg into a modern browser - Chrome, for example
