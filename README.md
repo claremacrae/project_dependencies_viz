@@ -58,7 +58,7 @@ Example reasons why you might want to see dependencies between your projects:
 * To explain the structure of your code to a colleague
 * To spot dependencies that don't make sense, in order to remove them
 * To plan project-restructuring exercises
-* To help divide up libraries that have become large
+* To help divide up libraries that have become too large
 * To speed up parallel builds by removing unnecessary dependencies between targets 
 
 ### Why SVG output?
@@ -150,7 +150,7 @@ The Python 3 script [dot_convert.py](dot_convert.py) does this conversion for al
 
 #### Viewing the .svg files, to see the dependencies
 
-Web browsers like Chrome and Vivaldi work make it really easy to view these files, with working hyperlinks. Firefox is fine too, but has the limitation that holding down the Shift key doesn't enable panning.
+Web browsers like Chrome and Vivaldi make it really easy to view these files, with working hyperlinks. Firefox is fine too, but has the limitation that holding down the Shift key doesn't enable panning.
 
 I found two approaches to provide access to the generated .SVG files:
 
